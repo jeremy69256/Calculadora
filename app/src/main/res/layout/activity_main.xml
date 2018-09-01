@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/num2"
         app:layout_constraintVertical_bias="0.035" />
 
-    <Button
+    <ImageButton
         android:id="@+id/sumar"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -58,13 +58,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
+        android:background="@drawable/plus"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toEndOf="@+id/resultado"
         app:layout_constraintTop_toBottomOf="@+id/num2" />
 
-    <Button
+    <ImageButton
         android:id="@+id/restar"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -74,12 +75,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="-"
+        android:background="@drawable/negative"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toEndOf="@+id/resultado"
         app:layout_constraintTop_toBottomOf="@+id/sumar" />
 
-    <Button
+    <ImageButton
         android:id="@+id/multiplicar"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -89,12 +91,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="*"
+        android:background="@drawable/multiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toEndOf="@+id/resultado"
         app:layout_constraintTop_toBottomOf="@+id/restar" />
 
-    <Button
+    <ImageButton
         android:id="@+id/dividir"
         android:layout_width="44dp"
         android:layout_height="40dp"
@@ -104,6 +107,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="/"
+        android:background="@drawable/divide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toEndOf="@+id/resultado"

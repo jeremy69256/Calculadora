@@ -1,19 +1,21 @@
 package com.example.hp.calculadora;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText num1;
     EditText num2;
-    Button sumar;
-    Button restar;
-    Button multiplicar;
-    Button dividir;
+    ImageButton sumar;
+    ImageButton restar;
+    ImageButton multiplicar;
+    ImageButton dividir;
     TextView resultado;
 
     @Override
@@ -44,12 +46,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String n1 = num1.getText().toString();
         String n2 = num2.getText().toString();
 
-        int entero1=Integer.parseInt(n1);
-        int entero2=Integer.parseInt(n2);
+        float entero1=Integer.parseInt(n1);
+        float entero2=Integer.parseInt(n2);
 
-        int rta=0;
+        float rta=0;
 
-        switch (view. getId()) {
+        /*switch (view. getId()) {
             case R.id.sumar:
                 rta = entero1 + entero2;
                 break;
@@ -62,7 +64,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dividir:
                 rta = entero1 / entero2;
                 break;
+        }*/
+
+        if(view.getId() == R.id.sumar)
+        {
+            rta = entero1 + entero2;
         }
+        else
+        {
+            if(view.getId()==R.id.restar)
+            {
+                rta = entero1 - entero2;
+            }
+            else
+            {
+                if(view.getId() ==R.id.multiplicar)
+                {
+                    rta = entero1 * entero2;
+                }
+                else
+                {
+                    if(view.getId() ==R.id.dividir)
+                    {
+                        rta = entero1 / entero2;
+                    }
+                }
+            }
+        }
+
 
       resultado.setText(""+rta);
     }
